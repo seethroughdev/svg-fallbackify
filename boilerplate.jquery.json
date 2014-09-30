@@ -1,0 +1,38 @@
+{
+	"name": "svgFallbackify",
+	"title": "SVG Fallbackify",
+	"description": "An easy way to detect and add fallbacks for your SVG",
+	"keywords": [
+		"jquery",
+		"svg",
+		"polyfill",
+		"fallback",
+		"plugins"
+	],
+	"version": "0.0.2",
+	"author": {
+		"name": "seethroughtrees",
+		"email": "zed@adamin.net",
+		"url": "https://github.com/seethroughtrees"
+	},
+	"maintainers": [
+		{
+			"name": "seethroughtrees",
+			"email": "zed@adamin.net",
+			"url": "https://github.com/seethroughtrees"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://zenorocha.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/jquery-boilerplate/boilerplate/issues",
+	"homepage": "http://jqueryboilerplate.com",
+	"docs": "https://github.com/jquery-boilerplate/boilerplate#readme",
+	"download": "https://github.com/jquery-boilerplate/boilerplate/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
