@@ -12,28 +12,45 @@
 				text-align: center;
 			}
 		</style>
+		<script>
+			// flag to test does not support
+			document.createElementNS = null;
+		</script>
 
 	</head>
 	<body>
 		<figure>
-			<img src="img/demo.svg" alt="Demo Image" data-svg-fallbackify>
-			<figcaption>Using generic data-svg-fallbackify.</figcaption>
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallback>
+			<figcaption>Using defaults data-svg-fallbackify.</figcaption>
 		</figure>
 		<figure>
-			<img src="img/demo.svg" alt="Demo Image" data-svg-fallbackify="jpg">
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallback="jpg">
 			<figcaption>Using data-svg-fallbackify extension</figcaption>
 		</figure>
 		<figure>
-			<img src="img/demo.svg" alt="Demo Image" data-svg-fallbackify="demo-also.png">
+			<img alt="Demo Image" data-svg-fallback="img/demo">
+			<figcaption>Using async image and no extension.</figcaption>
+		</figure>
+		<figure>
+			<img alt="Demo Image" data-svg-fallback="img/demo.svg">
+			<figcaption>Using async image with svg.</figcaption>
+		</figure>
+		<figure>
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallback="img/demo-also.png">
 			<figcaption>Using data-svg-fallbackify path</figcaption>
+		</figure>
+		<figure>
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallback="gif">
+			<figcaption>Using data-svg-fallbackify extension</figcaption>
 		</figure>
 
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../src/jquery.svg-fallbackify.js"></script>
 		<script>
 			$(function() {
-				$('[data-svg-fallbackify]').svgFallbackify({
+				$('[data-svg-fallback]').svgFallbackify({
 					defaultExt: "png"
 				});
 			});
