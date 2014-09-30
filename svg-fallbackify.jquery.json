@@ -28,10 +28,10 @@
 			"url": "http://zenorocha.mit-license.org/"
 		}
 	],
-	"bugs": "https://github.com/jquery-boilerplate/boilerplate/issues",
-	"homepage": "http://jqueryboilerplate.com",
-	"docs": "https://github.com/jquery-boilerplate/boilerplate#readme",
-	"download": "https://github.com/jquery-boilerplate/boilerplate/archive/master.zip",
+	"bugs": "https://github.com/seethroughtrees/svg-fallbackify/issues",
+	"homepage": "http://seethroughtrees.github.io/svg-fallbackify",
+	"docs": "https://github.com/seethroughtrees/svg-fallbackify#readme",
+	"download": "https://github.com/seethroughtrees/svg-fallbackify/archive/master.zip",
 	"dependencies": {
 		"jquery": ">=1.4"
 	}

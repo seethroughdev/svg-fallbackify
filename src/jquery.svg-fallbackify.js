@@ -1,8 +1,3 @@
-/*=============================================
-=  Started from the awesome jQuery boilerplate  =
-= http://jqueryboilerplate.com/ =
-=============================================*/
-
 
 ;(function ( $, window, document, undefined ) {
 

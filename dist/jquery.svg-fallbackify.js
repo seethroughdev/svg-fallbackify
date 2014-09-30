@@ -1,16 +1,11 @@
 /*
- *  jQuery Boilerplate - v3.3.4
- *  A jump-start for jQuery plugins development.
- *  http://jqueryboilerplate.com
+ *  SVG Fallbackify - v0.0.2
+ *  An easy way to detect and add fallbacks for your SVG
+ *  http://seethroughtrees.github.io/svg-fallbackify
  *
- *  Made by Zeno Rocha
+ *  Made by seethroughtrees
  *  Under MIT License
  */
-/*=============================================
-=  Started from the awesome jQuery boilerplate  =
-= http://jqueryboilerplate.com/ =
-=============================================*/
-
 
 ;(function ( $, window, document, undefined ) {
 
