@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>jQuery Boilerplate</title>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script src="../src/jquery.boilerplate.js"></script>
+		<title>jQuery SVG Fallbackify</title>
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+		<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<![endif]-->
+
+		<style>
+			html, body {
+				text-align: center;
+			}
+		</style>
+
 	</head>
 	<body>
-		<div id="element"></div>
+		<figure>
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallbackify>
+			<figcaption>Using generic data-svg-fallbackify.</figcaption>
+		</figure>
+		<figure>
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallbackify="jpg">
+			<figcaption>Using data-svg-fallbackify extension</figcaption>
+		</figure>
+		<figure>
+			<img src="img/demo.svg" alt="Demo Image" data-svg-fallbackify="demo-also.png">
+			<figcaption>Using data-svg-fallbackify path</figcaption>
+		</figure>
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../src/jquery.svg-fallbackify.js"></script>
 		<script>
 			$(function() {
-				$("#element").defaultPluginName({
-					propertyName: "a custom value"
+				$('[data-svg-fallbackify]').svgFallbackify({
+					defaultExt: "png"
 				});
 			});
 		</script>

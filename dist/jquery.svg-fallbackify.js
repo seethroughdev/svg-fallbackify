@@ -6,41 +6,42 @@
  *  Made by seethroughtrees
  *  Under MIT License
  */
+;(function($, window, document, undefined) {
 
-;(function ( $, window, document, undefined ) {
+  var pluginName = "svgFallbackify",
+    defaults = {
+      defaultExt: "png"
+    };
 
-		var pluginName = "svgFallback",
-				defaults = {
-					propertyName: "value"
-				};
+  function Plugin(element, options) {
+    this.element = element;
+    this.settings = $.extend({}, defaults, options);
+    this._defaults = defaults;
+    this._name = pluginName;
+    this.init(defaults);
+  }
 
-		function Plugin ( element, options ) {
-				this.element = element;
-				this.settings = $.extend( {}, defaults, options );
-				this._defaults = defaults;
-				this._name = pluginName;
-				this.init();
-		}
+  var svgUrl = "http://www.w3.org/2000/svg";
 
-		// Avoid Plugin.prototype conflicts
-		$.extend(Plugin.prototype, {
-				init: function () {
+  $.extend(Plugin.prototype, {
+    init: function(defaults) {
+    	console.log(defaults);
+    },
+    isSupported: function() {
+      return !!document && !!document.createElementNS &&
+        !!document.createElementNS(svgUrl, "svg").createSVGRect;
+    }
+  });
 
-				},
-				yourOtherFunction: function () {
-						// some logic
-				}
-		});
+  $.fn[pluginName] = function(options) {
+    this.each(function() {
+      if (!$.data(this, "plugin_" + pluginName)) {
+        $.data(this, "plugin_" + pluginName, new Plugin(this, options));
+      }
+    });
 
-		$.fn[ pluginName ] = function ( options ) {
-				this.each(function() {
-						if ( !$.data( this, "plugin_" + pluginName ) ) {
-								$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
-						}
-				});
+    // chain jQuery functions
+    return this;
+  };
 
-				// chain jQuery functions
-				return this;
-		};
-
-})( jQuery, window, document );
+})(jQuery, window, document);
