@@ -13,10 +13,11 @@
     this.init(this.settings);
   }
 
-  // check that the filename we"re replacing is an SVG
-  function isSvg(val) {
-    var reg = /\.svg$/ig;
-    return reg.test(val);
+
+  // check if data-svg-fallback IS image extension
+  function isExt(val) {
+    var reg = /^(?:jpg|gif|png|svg|jpeg)$/i;
+    return val.match(reg);
   }
 
   // check if data-svg-fallback HAS image extension
@@ -25,10 +26,10 @@
     return val.match(reg);
   }
 
-  // check if data-svg-fallback IS image extension
-  function isExt(val) {
-  	var reg = /^(?:jpg|gif|png|svg|jpeg)$/i;
-  	return val.match(reg);
+  // check that filename is an SVG
+  function isSvg(val) {
+    var reg = /\.svg$/ig;
+    return reg.test(val);
   }
 
   // replace svg extension with another
@@ -61,16 +62,12 @@
           supportsSvg = this.supportsSvg();
 
     	if (typeof fallbackVal === "undefined") {
-    		return;
+    		throw new Error("Element must have data-svg-fallback attribute!");
     	}
 
-      // if no src and supports svg and fallback has no ext
-      if (supportsSvg && !isSvg(srcVal) && !hasExt(fallbackVal)) {
-        getFallback($el, fallbackVal, "svg");
-      }
-
-      // if svg src is not svg, get fallback
-      if (supportsSvg && !isSvg(srcVal) && isSvg(fallbackVal)) {
+      // if no src and supports svg and fallback has no ext or is svg
+      if (supportsSvg && !isSvg(srcVal) &&
+            (!hasExt(fallbackVal) || isSvg(fallbackVal))) {
         getFallback($el, fallbackVal, "svg");
       }
 
