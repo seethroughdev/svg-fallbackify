@@ -1,4 +1,13 @@
-;(function($, window, document, undefined) {
+// make AMD browserify compatible
+
+;(function (factory) {
+  if (typeof define === "function" && define.amd) {
+    define(["jquery"], factory);
+  } else if (typeof exports === "object") {
+    factory(require("jquery"));
+  }
+
+}(function($, window, document, undefined) {
 
   var pluginName = "svgFallbackify",
     defaults = {
@@ -96,4 +105,4 @@
     return plugin;
   };
 
-})(jQuery, window, document);
+}(jQuery, window, document)));
