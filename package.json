@@ -12,6 +12,6 @@
   },
   "main": "dist/jquery.svg-fallbackify.js",
   "scripts": {
-    "test": "testem"
+    "test": "testem ci"
   }
 }
