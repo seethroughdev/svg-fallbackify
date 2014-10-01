@@ -5,5 +5,7 @@
         "dist/jquery.svg-fallbackify.js",
         "spec/**/*.js"
     ],
-    "launch_in_dev": ["PhantomJS"]
+    "launch_in_dev": ["PhantomJS"],
+    "launch_in_ci": ["PhantomJS"],
+    "reporter": "tap"
 }
