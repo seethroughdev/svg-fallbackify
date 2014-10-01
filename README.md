@@ -7,7 +7,7 @@ fallback for users with browsers that don't support them.
 
 #### Install
 
-Download [the file](the file), or grab it from Bower
+Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.js) or [minified](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.min.js), or grab it from Bower
 
 ``` bower install svg-fallbackify```
 
