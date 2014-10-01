@@ -53,7 +53,7 @@ describe("SVG Fallbackify", function() {
 
     it('should override extension option', function () {
       $(examples[0]).appendTo('body');
-      $('[data-svg-fallback]').svgFallbackify({defaultExt: "jpg"});
+      $('[data-svg-fallback]').svgFallbackify({ext: "jpg"});
       expect($('[data-svg-fallback]').attr('src')).toEqual('img/demo.jpg');
     });
 

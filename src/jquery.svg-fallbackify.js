@@ -11,7 +11,7 @@
 
   var pluginName = "svgFallbackify",
     defaults = {
-      defaultExt: "png"
+      ext: "png"
     };
 
   function Plugin(element, options) {
@@ -82,7 +82,7 @@
 
       // if does not support svg, replace with fallback
       if (!supportsSvg) {
-        getFallback($el, fallbackVal, settings.defaultExt);
+        getFallback($el, fallbackVal, settings.ext);
       }
 
     },
