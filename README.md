@@ -17,8 +17,9 @@ Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/mast
 
 ``` bower install svg-fallbackify```
 
-Currently the script uses jQuery as a dependency.  So make sure you load it after
-jQuery.
+This is a jQuery plugin, so make sure you load it after jQuery.
+
+(Since we're detecting for old browsers, remember to use v1.11.x of jQuery, 2.x does NOT support old IE!)
 
 ``` html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
