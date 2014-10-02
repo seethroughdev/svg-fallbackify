@@ -27,6 +27,8 @@ Then just call the plugin somewhere in your js:
 $('[data-svg-fallback]').svgFallbackify();
 ```
 
+==================
+
 ### Usage
 
 **SVG Fallbackify** tries to be flexible in how you set up your image.  But the
@@ -46,6 +48,8 @@ browser does not handle SVG.
 So if in your same folder, you have a file ```path-to-img.png``` it will automatically
 be replaced.
 
+==================
+
 ### Options
 
 You can add your fallback file in a few ways.
@@ -55,8 +59,6 @@ If your images are in the same folder and are a png, you can just add the ```dat
 ``` html
 <img src="path-to-img.svg" data-svg-fallback />
 ```
-
-==================
 
 You can also add a few other options into the ```data-svg-fallback`` attribute to make it more specific.
 
@@ -88,6 +90,8 @@ You can even leave the extension off and let the plugin decide.
 <img src="blank.gif" data-svg-fallback="path-to-image" />
 ```
 
+==================
+
 ### Methods
 
 You also get a method in case you need to check for SVG support on your own as well.
@@ -102,6 +106,8 @@ Will return ```true``` if the browser supports it, and ```false``` if it doesn't
 If someone has a better suggestion, I'm all ears for improving it.  But with my testing, it works so far.*
 
 
+==================
+
 
 # Contributing
 
@@ -113,6 +119,8 @@ Before sending a pull request remember to follow [jQuery Core Style Guide](http:
 4. Commit your changes: `git commit -m 'Add some feature'`
 5. Push to the branch: `git push origin my-new-feature`
 6. Submit a pull request :D
+
+==================
 
 #### Have you created a plugin from our boilerplate?
 
