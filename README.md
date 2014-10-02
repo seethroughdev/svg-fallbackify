@@ -5,9 +5,9 @@
 SVG Fallbackify is an easy way to use SVG images on your site and provide an automated
 fallback for users with browsers that don't support them.
 
-It will basically detect SVG support and change the image src accordingly.
+It will detect SVG support and change the image src accordingly.
 
-It is AMD and CommonJS compatible. Check out [this great article](http://addyosmani.com/writing-modular-js/) for more info.
+*SVG Fallbackify is AMD and CommonJS compatible.*
 
 ==================
 
@@ -111,6 +111,10 @@ Will return ```true``` if the browser supports it, and ```false``` if it doesn't
 *I am currently using the [modernizr](http://modernizr.com/) technique for detecting SVG support.
 If someone has a better suggestion, I'm all ears for improving it.  But with my testing, it works so far.*
 
+
+==================
+
+SVG Fallbackify is AMD and CommonJS compatible. Check out [this great article](http://addyosmani.com/writing-modular-js/) for more info.
 
 ==================
 
