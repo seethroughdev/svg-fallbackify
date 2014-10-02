@@ -5,6 +5,8 @@
 SVG Fallbackify is an easy way to use SVG images on your site and provide an automated
 fallback for users with browsers that don't support them.
 
+It will basically detect SVG support and change the image src accordingly.
+
 #### Install
 
 Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.js) or [minified](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.min.js), or grab it from Bower
@@ -27,7 +29,7 @@ $('[data-svg-fallback]').svgFallbackify();
 
 #### Usage
 
-*SVG Fallbackify* tries to be flexible for how you set up your image.  But the
+**SVG Fallbackify** tries to be flexible in how you set up your image.  But the
 most important part is to add the **data-svg-fallback** attribute to your image.
 
 And of course, have a png/jpg/gif somewhere on your site to fallback to.
@@ -38,7 +40,7 @@ Ex.
 <img src="path-to-img.svg" data-svg-fallback />
 ```
 
-That data attribute will tell the element to replace the .svg extension if the
+The data attribute will tell the element to replace the .svg extension if the
 browser does not handle SVG.
 
 So if in your same folder, you have a file ```path-to-img.png``` it will automatically
@@ -54,7 +56,9 @@ If your images are in the same folder and are a png, you can just add the ```dat
 <img src="path-to-img.svg" data-svg-fallback />
 ```
 
-On the other hand, you can add a few other options into the ```data-svg-fallback`` attribute to make it more specific.
+==================
+
+You can also add a few other options into the ```data-svg-fallback`` attribute to make it more specific.
 
 If you want to override the extension of the file being replaced, just add the extension:
 
@@ -76,7 +80,7 @@ I personally use this method to load the images async, and only once.
 <img src="blank.gif" data-svg-fallback="path-to-image.svg" />
 ```
 
-**where I will put a 1px *blank.gif* file in my folder, and let it cache and load that initially.**
+*where I will put a 1px *blank.gif* file in my folder, and let it cache and load that initially.*
 
 #### Methods
 
@@ -88,8 +92,8 @@ $('[data-svg-fallback]').svgFallbackify().supportsSvg();
 
 Will return ```true``` if the browser supports it, and ```false``` if it doesn't.
 
-**I am currently using the [modernizr](http://modernizr.com/) technique for detecting SVG support.
-If someone has a better suggestion, I'm all ears for improving it.  But with my testing, it works so far.**
+*I am currently using the [modernizr](http://modernizr.com/) technique for detecting SVG support.
+If someone has a better suggestion, I'm all ears for improving it.  But with my testing, it works so far.*
 
 
 
