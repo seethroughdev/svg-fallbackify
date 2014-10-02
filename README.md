@@ -11,8 +11,6 @@ Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/mast
 
 ``` bower install svg-fallbackify```
 
-#### Usage
-
 Currently the script uses jQuery as a dependency.  So make sure you load it after
 jQuery.
 
@@ -21,11 +19,28 @@ jQuery.
 <script src="bower_components/svg-fallbackify/jquery.svg-fallbackify.js"></script>
 ```
 
-Then just add the method here:
+#### Usage
+
+*SVG Fallbackify* tries to be flexible for how you set up your image.  But the
+most important part is to add the **data-svg-fallback** attribute to your image.
+
+Ex.
+
+``` html
+
+<img src="path-to-img.svg" data-svg-fallback />
+
+```
+
+That data attribute will tell the element to replace the .svg extension if the
+browser does not handle SVG.
+
+Then just call the plugin somewhere in your js:
 
 ``` javascript
   $('[data-svg-fallback]').svgFallbackify();
 ```
+
 
 
 
