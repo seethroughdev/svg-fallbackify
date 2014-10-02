@@ -16,7 +16,7 @@ Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/mast
 Currently the script uses jQuery as a dependency.  So make sure you load it after
 jQuery.
 
-``` javascript
+``` html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="bower_components/svg-fallbackify/jquery.svg-fallbackify.js"></script>
 ```
