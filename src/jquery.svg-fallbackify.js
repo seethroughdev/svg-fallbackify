@@ -5,8 +5,6 @@
     define(["jquery"], factory);
   } else if (typeof exports === "object") {
     factory(require("jquery"));
-  } else {
-    factory(window.jQuery);
   }
 
 }(function($, window, document, undefined) {
