@@ -1,7 +1,7 @@
 {
     "framework": "jasmine2",
     "src_files": [
-        "bower_components/jquery/dist/jquery.js",
+        "demo/js/jquery.min.js",
         "dist/jquery.svg-fallbackify.js",
         "spec/**/*.js"
     ],
