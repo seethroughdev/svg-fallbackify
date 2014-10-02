@@ -7,6 +7,8 @@ fallback for users with browsers that don't support them.
 
 It will basically detect SVG support and change the image src accordingly.
 
+==================
+
 ### Install
 
 Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.js) or [minified](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.min.js), or grab it from Bower
@@ -29,10 +31,19 @@ $('[data-svg-fallback]').svgFallbackify();
 
 ==================
 
+The default extension to replace is ```png```, but you can override that:
+
+``` javascript
+$('[data-svg-fallback]').svgFallbackify({
+  ext: 'jpg'
+});
+```
+==================
+
 ### Usage
 
 **SVG Fallbackify** tries to be flexible in how you set up your image.  But the
-most important part is to add the **data-svg-fallback** attribute to your image.
+most important part is to add the **data-svg-fallback** attribute.
 
 And of course, have a png/jpg/gif somewhere on your site to fallback to.
 
@@ -50,7 +61,7 @@ be replaced.
 
 ==================
 
-### Options
+### More
 
 You can add your fallback file in a few ways.
 
