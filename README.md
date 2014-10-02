@@ -21,6 +21,11 @@ jQuery.
 <script src="bower_components/svg-fallbackify/jquery.svg-fallbackify.js"></script>
 ```
 
+Then just add the method here:
+
+```
+  $('[data-svg-fallback]').svgFallbackify();
+```
 
 
 
