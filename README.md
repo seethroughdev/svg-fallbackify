@@ -7,6 +7,8 @@ fallback for users with browsers that don't support them.
 
 It will basically detect SVG support and change the image src accordingly.
 
+It is AMD and CommonJS compatible. Check out [this great article](http://addyosmani.com/writing-modular-js/) for more info.
+
 ==================
 
 ### Install
