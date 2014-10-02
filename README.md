@@ -22,7 +22,7 @@ jQuery.
 Then just call the plugin somewhere in your js:
 
 ``` javascript
-  $('[data-svg-fallback]').svgFallbackify();
+$('[data-svg-fallback]').svgFallbackify();
 ```
 
 #### Usage
@@ -35,9 +35,7 @@ And of course, have a png/jpg/gif somewhere on your site to fallback to.
 Ex.
 
 ``` html
-
 <img src="path-to-img.svg" data-svg-fallback />
-
 ```
 
 That data attribute will tell the element to replace the .svg extension if the
@@ -53,27 +51,45 @@ You can add your fallback file in a few ways.
 If your images are in the same folder and are a png, you can just add the ```data-svg-fallback``` attribute.
 
 ``` html
-
 <img src="path-to-img.svg" data-svg-fallback />
-
 ```
 
-If your images are in the same folder, and are not a png.  You have a couple choices:
+On the other hand, you can add a few other options into the ```data-svg-fallback`` attribute to make it more specific.
 
-Specify the extension in the data-attribute
+If you want to override the extension of the file being replaced, just add the extension:
 
 ``` html
 <img src="path-to-img.svg" data-svg-fallback="jpg" />
 ```
 
-Or if it's the same everywhere, you can pass the option in when calling the plugin:
+If you want to add a separate image file or path to the fallback, you can provide it there:
 
-```javascript
-$('[data-svg-fallback]').svgFallbackify({
-  ext: 'jpg'
-});
+``` html
+<img src="path-to-img.svg" data-svg-fallback="different-image-path.jpg" />
 ```
 
+Or you might want to avoid loading the svg at all if the browser doesn't support it.
+
+I personally use this method to load the images async, and only once.
+
+``` html
+<img src="blank.gif" data-svg-fallback="path-to-image.svg" />
+```
+
+**where I will put a 1px *blank.gif* file in my folder, and let it cache and load that initially.**
+
+#### Methods
+
+You also get a method in case you need to check for SVG support on your own as well.
+
+```javascript
+$('[data-svg-fallback]').svgFallbackify().supportsSvg();
+```
+
+Will return ```true``` if the browser supports it, and ```false``` if it doesn't.
+
+**I am currently using the [modernizr](http://modernizr.com/) technique for detecting SVG support.
+If someone has a better suggestion, I'm all ears for improving it.  But with my testing, it works so far.**
 
 
 
