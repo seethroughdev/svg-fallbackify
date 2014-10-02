@@ -7,7 +7,7 @@ fallback for users with browsers that don't support them.
 
 It will basically detect SVG support and change the image src accordingly.
 
-#### Install
+### Install
 
 Download the [full](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.js) or [minified](https://github.com/seethroughtrees/svg-fallbackify/blob/master/dist/jquery.svg-fallbackify.min.js), or grab it from Bower
 
@@ -27,7 +27,7 @@ Then just call the plugin somewhere in your js:
 $('[data-svg-fallback]').svgFallbackify();
 ```
 
-#### Usage
+### Usage
 
 **SVG Fallbackify** tries to be flexible in how you set up your image.  But the
 most important part is to add the **data-svg-fallback** attribute to your image.
@@ -46,7 +46,7 @@ browser does not handle SVG.
 So if in your same folder, you have a file ```path-to-img.png``` it will automatically
 be replaced.
 
-#### Options
+### Options
 
 You can add your fallback file in a few ways.
 
@@ -82,7 +82,13 @@ I personally use this method to load the images async, and only once.
 
 *where I will put a 1px *blank.gif* file in my folder, and let it cache and load that initially.*
 
-#### Methods
+You can even leave the extension off and let the plugin decide.
+
+``` html
+<img src="blank.gif" data-svg-fallback="path-to-image" />
+```
+
+### Methods
 
 You also get a method in case you need to check for SVG support on your own as well.
 
