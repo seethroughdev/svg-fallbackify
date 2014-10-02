@@ -90,7 +90,7 @@ Or you might want to avoid loading the svg at all if the browser doesn't support
 I personally use this method to load the images async, and only once.
 
 ``` html
-<!-- *I put a 1px *blank.gif* file in my folder, and let it cache and load that initially.*
+<!-- I put a 1px blank.gif file in my folder, to cache and load initially.
  -->
 <img src="blank.gif" data-svg-fallback="path-to-image.svg" />
 ```
