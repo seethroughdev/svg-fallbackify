@@ -120,6 +120,12 @@ SVG Fallbackify is AMD and CommonJS compatible. Check out [this great article](h
 ==================
 
 
+### Todo
+
+- Look into replacing inline svg as an option
+
+==================
+
 # Contributing
 
 Before sending a pull request remember to follow [jQuery Core Style Guide](http://contribute.jquery.org/style-guide/js/).

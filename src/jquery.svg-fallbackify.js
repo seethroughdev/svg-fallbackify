@@ -5,6 +5,8 @@
     define(["jquery"], factory);
   } else if (typeof exports === "object") {
     factory(require("jquery"));
+  } else {
+    factory(window.jQuery);
   }
 
 }(function($, window, document, undefined) {
@@ -74,7 +76,8 @@
     		throw new Error("Element must have data-svg-fallback attribute!");
     	}
 
-      // if no src and supports svg and fallback has no ext or is svg
+      // if supports svg but svg is not in src
+      // and fallback has no ext or is svg
       if (supportsSvg && !isSvg(srcVal) &&
             (!hasExt(fallbackVal) || isSvg(fallbackVal))) {
         getFallback($el, fallbackVal, "svg");
